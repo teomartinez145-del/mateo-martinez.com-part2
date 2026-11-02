@@ -1,132 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#15121c" />
-  <meta name="description" content="Eclipse Entertainment dine-in theatre: movie showtimes, seats, food and drinks." />
-  <title>Eclipse Entertainment</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main-styles.css" />
+  <meta charset="UTF-8">
+  <script>document.documentElement.classList.add('js');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MateoMartinez | Portfolio</title>
+  <meta name="description" content="Portfolio website of MateoMartinez - Projects, About Me, and Contact information.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="page-transition.js"></script>
 </head>
+
 <body>
 
-  <!-- ================= HEADER ================= -->
-  <header class="main-header" id="mainHeader">
-    <a href="index.html" class="logo-link">
-      <img src="images/logo.png" alt="Eclipse Entertainment" class="logo">
-    </a>
+  <a class="corner-link" href="about.html">About&nbsp;Me &rarr;</a>
 
-    <div class="header-menu" id="headerMenu">
-      <nav class="nav-links" aria-label="Main">
-        <a href="find-theatre.html">Find a Theatre</a>
-        <a href="food-drinks.html">Food &amp; Drinks</a>
-        <div class="dropdown" id="moreDropdown">
-          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">More <span class="caret">▼</span></a>
-          <div class="dropdown-content">
-            <a href="find jobs.html">Find Jobs</a>
-            <a href="combo-offers.html">Combo Offers</a>
-            <a href="#">Gift Cards</a>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="sr-only">Mateo Martinez</h1>
+      <img class="hero-logo-video" src="images/mateo logo.gif" alt="" aria-hidden="true">
+    </div>
+  </section>
+
+  <!-- ===== Showcase — horizontal scroll-journey through what I do ===== -->
+  <section class="showcase" id="showcase">
+    <div class="showcase-sticky">
+      <div class="showcase-track" id="showcase-track">
+        <div class="showcase-panel" data-panel="01">
+          <div class="showcase-panel__inner">
+            <span class="showcase-panel__num">01</span>
+            <h2 class="showcase-panel__title">Brand Identity</h2>
+            <p class="showcase-panel__text">Logos, visual systems, and style guides built so a business looks like one
+              coherent thing everywhere it shows up — from a business card to a storefront.</p>
           </div>
         </div>
-      </nav>
 
-      <div class="search-section">
-        <input type="search" id="searchInput" placeholder="Search movies" aria-label="Search movies" enterkeyhint="search" autocomplete="off">
-        <span class="icon" aria-hidden="true">🔍</span>
+        <div class="showcase-panel" data-panel="02">
+          <div class="showcase-panel__inner">
+            <span class="showcase-panel__num">02</span>
+            <h2 class="showcase-panel__title">Print Production</h2>
+            <p class="showcase-panel__text">Owner of Maprintex — custom direct-to-film apparel and branded print, taken
+              from concept through client approval to the final delivered piece.</p>
+          </div>
+        </div>
+
+        <div class="showcase-panel" data-panel="03">
+          <div class="showcase-panel__inner">
+            <span class="showcase-panel__num">03</span>
+            <h2 class="showcase-panel__title">Video &amp; Photography</h2>
+            <p class="showcase-panel__text">Event coverage, brand content, and short-form social edits — shot and cut in
+              Premiere Pro for clients like TopoDOT and Yesmine Spa.</p>
+          </div>
+        </div>
+
+        <div class="showcase-panel" data-panel="04">
+          <div class="showcase-panel__inner">
+            <span class="showcase-panel__num">04</span>
+            <h2 class="showcase-panel__title">Web &amp; Front-End</h2>
+            <p class="showcase-panel__text">Responsive layouts and interactive detail work in HTML, CSS, and SCSS — the
+              same design eye applied to a screen instead of a page.</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="user-icons">
-      <a href="my-eclipse.html#tickets" class="icon-wrapper">
-        <img src="images/ticket.png" alt="" aria-hidden="true">
-        <span>Tickets</span>
-      </a>
-      <a href="my-eclipse.html" class="icon-wrapper" id="accountLink">
-        <img src="images/user.png" alt="" aria-hidden="true">
-        <span>My Eclipse</span>
-      </a>
-    </div>
-
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="headerMenu">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
-
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="hero-inner">
-      <p class="hero-eyebrow">Dine-In Theatre <span>•</span> Movies <span>•</span> Food &amp; Drinks</p>
-      <h1 class="hero-title">Eclipse Entertainment</h1>
-      <p class="hero-tagline">Movie mode: activated. Great films, the perfect snack, and a seat made just for you.</p>
-      <a href="food-drinks.html" class="btn-primary">Order Food &amp; Drinks</a>
-
-      <div class="date-strip">
-        <button class="date-arrow" id="datePrev" type="button" aria-label="Previous dates">&#10094;</button>
-        <div class="date-list" id="dateList" role="tablist" aria-label="Choose a date"></div>
-        <button class="date-arrow" id="dateNext" type="button" aria-label="More dates">&#10095;</button>
+      <div class="showcase-hud" aria-hidden="true">
+        <span class="showcase-hud__count"><span id="showcase-hud-current">01</span><span class="showcase-hud__sep">/</span>04</span>
+        <span class="showcase-hud__bar"><span class="showcase-hud__fill" id="showcase-hud-fill"></span></span>
       </div>
     </div>
   </section>
 
-  <!-- ================= SHOWTIMES ================= -->
-  <main class="showtimes" id="showtimes">
-    <div class="showtimes-panel">
-      <div class="panel-heading">
-        <span class="clock-icon" aria-hidden="true"></span>
-        <h2 id="showtimesTitle">Movie show times</h2>
-        <span class="heading-line" aria-hidden="true"></span>
-      </div>
+  <section class="projects" id="projects">
+    <div class="projects-container">
+      <p class="section-label">My Work</p>
+      <h2 class="projects-heading">Projects</h2>
+      <p class="projects-subtitle">A selection of recent work across branding, print, and digital design.</p>
 
-      <div class="showtime-grid" id="movieGrid"></div>
-      <p class="no-results" id="noResults" hidden>No movies match your search.</p>
+      <div class="gallery-grid" id="gallery-grid">
+        <div class="gallery-card" tabindex="0" role="button" aria-label="View Eclipse">
+          <img src="eclipse/index.html" alt="index" class="project-image gallery-card__image">
+          <div class="gallery-card__overlay">
+            <span class="gallery-card__icon">&#128269;</span>
+            <h3 class="gallery-card__title">Eclipse</h3>
+          </div>
+        </div>
+
+        <div class="gallery-card" tabindex="0" role="button" aria-label="View Yale School of Art">
+          <img src="PEGA-AQUI-EL-LINK-DE-LA-IMAGEN" alt="Yale School of Art" class="project-image gallery-card__image">
+          <div class="gallery-card__overlay">
+            <span class="gallery-card__icon">&#128269;</span>
+            <h3 class="gallery-card__title">Yale School of Art</h3>
+          </div>
+        </div>
+
+        <div class="gallery-card" tabindex="0" role="button" aria-label="View Musical Festival">
+          <img src="Oak Harbor Musical Festival/Index1.html" alt="Musical Festival" class="project-image gallery-card__image">
+          <div class="gallery-card__overlay">
+            <span class="gallery-card__icon">&#128269;</span>
+            <h3 class="gallery-card__title">Musical Festival</h3>
+          </div>
+        </div>
+
+        <div class="gallery-card" tabindex="0" role="button" aria-label="View Greenwave">
+          <img src="images/project-greenwave.jpg" alt="Greenwave" class="project-image gallery-card__image">
+          <div class="gallery-card__overlay">
+            <span class="gallery-card__icon">&#128269;</span>
+            <h3 class="gallery-card__title">Greenwave</h3>
+          </div>
+        </div>
+
+        <div class="gallery-card" tabindex="0" role="button" aria-label="View Kick Off">
+          <img src="images/project-kickoff.jpg" alt="Kick Off" class="project-image gallery-card__image">
+          <div class="gallery-card__overlay">
+            <span class="gallery-card__icon">&#128269;</span>
+            <h3 class="gallery-card__title">Kick Off</h3>
+          </div>
+        </div>
+
+        <div class="gallery-card" tabindex="0" role="button" aria-label="View Movie Theater">
+          <img src="PEGA-AQUI-EL-LINK-DE-LA-IMAGEN" alt="Movie Theater" class="project-image gallery-card__image">
+          <div class="gallery-card__overlay">
+            <span class="gallery-card__icon">&#128269;</span>
+            <h3 class="gallery-card__title">Movie Theater</h3>
+          </div>
+        </div>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <img src="images/logo.png" alt="Eclipse Entertainment" class="footer-logo">
-        <p>Dine-in theatre. Movies, food and drinks, all from your seat.</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Our Company</h4>
-        <a href="#">Contact Us</a>
-        <a href="#">FAQs</a>
-        <a href="find jobs.html">Careers</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms &amp; Conditions</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Movies</h4>
-        <a href="index.html#showtimes">Showtimes</a>
-        <a href="find-theatre.html">Theatres</a>
-        <a href="#">3D</a>
-        <a href="#">IMAX</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Events</h4>
-        <a href="#">Groups and Events</a>
-        <a href="#">Birthday Parties</a>
-        <a href="#">Private Watch Party</a>
-        <a href="#">Private Screenings</a>
-        <a href="#">Film Festivals</a>
+  <div class="gallery-lightbox" id="gallery-lightbox" aria-hidden="true">
+    <div class="gallery-lightbox__backdrop" id="gallery-lightbox-backdrop"></div>
+    <div class="gallery-lightbox__content" role="dialog" aria-modal="true" aria-labelledby="gallery-lightbox-title">
+      <button class="gallery-lightbox__close" id="gallery-lightbox-close" aria-label="Close">&times;</button>
+      <button class="gallery-lightbox__nav gallery-lightbox__nav--prev" id="gallery-lightbox-prev"
+        aria-label="Previous image">&#8592;</button>
+      <button class="gallery-lightbox__nav gallery-lightbox__nav--next" id="gallery-lightbox-next"
+        aria-label="Next image">&#8594;</button>
+      <img src="" alt="" class="gallery-lightbox__image" id="gallery-lightbox-image">
+      <div class="gallery-lightbox__info">
+        <h3 id="gallery-lightbox-title"></h3>
       </div>
     </div>
+  </div>
 
-    <div class="footer-bottom">
-      <p>© <span id="year">2026</span> Eclipse Entertainment Dine-In Theatre.</p>
-    </div>
-  </footer>
-
-  <script src="movie-list.js"></script>
-  <script src="menu.js"></script>
-  <script src="homepage.js"></script>
+  <script src="index.js" defer></script>
 </body>
+
 </html>
